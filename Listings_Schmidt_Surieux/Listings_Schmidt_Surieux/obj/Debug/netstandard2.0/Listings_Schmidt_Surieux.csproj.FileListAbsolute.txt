@@ -1,0 +1,16 @@
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\bin\Debug\netstandard2.0\Listings_Schmidt_Surieux.deps.json
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\bin\Debug\netstandard2.0\Listings_Schmidt_Surieux.dll
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Listings_Schmidt_Surieux.csprojAssemblyReference.cache
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Listings_Schmidt_Surieux.csproj.CoreCompileInputs.cache
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Listings_Schmidt_Surieux.AssemblyInfoInputs.cache
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Listings_Schmidt_Surieux.AssemblyInfo.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\DetailListingPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Debug\netstandard2.0\Views\ListListingPage.xaml.g.cs
