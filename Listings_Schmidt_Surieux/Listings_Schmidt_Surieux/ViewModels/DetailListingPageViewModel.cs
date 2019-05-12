@@ -1,30 +1,17 @@
-﻿using Listings_Schmidt_Surieux.Models;
+﻿using System;
+
+using Listings_Schmidt_Surieux.Models;
+using Xamarin.Forms;
 
 namespace Listings_Schmidt_Surieux.ViewModels
 {
     public class DetailListingPageViewModel : BaseViewModel
     {
-        // Constructeur
-        public DetailListingPageViewModel(Listing listing)
+        public Listing Item { get; set; }
+        public DetailListingPageViewModel(INavigation Navigation, Listing listing) : base(Navigation)
         {
-            CurrentListing = listing;
-            Titre = "Détail de l'article";
+            Title = listing?.Title;
+            Item = listing;
         }
-
-        #region BindableProperties
-
-        private Listing currentListing;
-        public Listing CurrentListing
-        {
-            get { return currentListing; }
-            set
-            {
-                currentListing = value;
-                OnPropertyChanged();
-            }
-        }
-
-        #endregion        
-
     }
 }

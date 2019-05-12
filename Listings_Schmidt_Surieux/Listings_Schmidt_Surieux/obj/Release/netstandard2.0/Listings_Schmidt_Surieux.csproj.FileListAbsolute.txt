@@ -1,6 +1,5 @@
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Listings_Schmidt_Surieux.csprojAssemblyReference.cache
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\App.xaml.g.cs
-D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\MainPage.xaml.g.cs
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Views\DetailListingPage.xaml.g.cs
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Views\ListListingPage.xaml.g.cs
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Listings_Schmidt_Surieux.csproj.CoreCompileInputs.cache
@@ -12,3 +11,9 @@ D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\L
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\XamlC.stamp
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Listings_Schmidt_Surieux.dll
 D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Listings_Schmidt_Surieux.pdb
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Views\CreateListingPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Listings_Schmidt_Surieux.Ressources.MyAppRessources.resources
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Listings_Schmidt_Surieux.csproj.GenerateResource.cache
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Views\MenuPage.xaml.g.cs
+D:\Cours\Ynov\Xamarin\projet\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\Listings_Schmidt_Surieux\obj\Release\netstandard2.0\Views\NewItemPage.xaml.g.cs

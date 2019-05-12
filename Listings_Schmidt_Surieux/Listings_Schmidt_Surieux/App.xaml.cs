@@ -1,7 +1,15 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Listings_Schmidt_Surieux.Views;
+using Listings_Schmidt_Surieux.Interfaces;
+using Listings_Schmidt_Surieux.ViewModels;
+using Listings_Schmidt_Surieux.Services;
+using Listings_Schmidt_Surieux.Models;
+using System.Threading.Tasks;
+using Listings_Schmidt_Surieux.Utils;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Listings_Schmidt_Surieux
 {
     public partial class App : Application
@@ -10,23 +18,29 @@ namespace Listings_Schmidt_Surieux
         public App()
         {
             InitializeComponent();
+            DependencyService.Register<IDataStore<Listing>>();
+            var currentSmartphoneLanguage = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
 
-            MainPage = new NavigationPage(new ListListingPage()); ;
+            if (Settings.IsUserConnected)
+            {
+                DisplayHome();
+            }
+            else
+            {
+                DisplayLogin();
+            }
         }
 
-        protected override void OnStart()
+        public void DisplayLogin()
         {
-            // Handle when your app starts
+            //Affectation Mainpage
+            MainPage = new LoginPage();
         }
 
-        protected override void OnSleep()
+        public void DisplayHome()
         {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            //Affectation Mainpage
+            MainPage = new MenuPage();
         }
     }
 }

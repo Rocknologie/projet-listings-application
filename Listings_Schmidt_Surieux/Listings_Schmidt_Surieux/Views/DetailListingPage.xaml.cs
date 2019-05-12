@@ -1,18 +1,21 @@
-﻿using Listings_Schmidt_Surieux.Models;
-using Listings_Schmidt_Surieux.ViewModels;
+﻿using System;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
+using Listings_Schmidt_Surieux.Models;
+using Listings_Schmidt_Surieux.ViewModels;
 
 namespace Listings_Schmidt_Surieux.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetailListingPage : ContentPage
     {
-        public DetailListingPage(Listing listing)
+        DetailListingPageViewModel viewmodel;
+        public DetailListingPage(Listing item)
         {
             InitializeComponent();
-            BindingContext = new DetailListingPageViewModel(listing);
+            BindingContext = viewmodel = new DetailListingPageViewModel(Navigation, item);
         }
     }
 }

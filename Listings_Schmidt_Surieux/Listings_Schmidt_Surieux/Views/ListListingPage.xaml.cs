@@ -1,46 +1,35 @@
-﻿using Listings_Schmidt_Surieux.ViewModels;
-using Listings_Schmidt_Surieux.Models;
-using Listings_Schmidt_Surieux.Utils;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using Listings_Schmidt_Surieux.Models;
+using Listings_Schmidt_Surieux.Views;
+using Listings_Schmidt_Surieux.ViewModels;
+
 namespace Listings_Schmidt_Surieux.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListListingPage : ContentPage
     {
-        private ListListingPageViewModel viewModel;
+        ListListingPageViewModel viewmodel;
         public ListListingPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ListListingPageViewModel();
-
-            MyListview.ItemTapped += MyListview_ItemTapped;
+            BindingContext = viewmodel = new ListListingPageViewModel(Navigation);
         }
 
-        //  Action lorsqu'un pays est séléctionné
-        private void MyListview_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void ItemsListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            try
+            if (e.Item != null)
             {
-                ((ListListingPageViewModel)BindingContext).SelectedListing = null;
-                Listing selectedListing = (Listing)e.Item;
-                Navigation.PushAsync(new DetailListingPage(selectedListing), true);
+                Listing selected = ((Listing)e.Item);
+                await Navigation.PushAsync(new DetailListingPage(selected));
             }
-            catch (Exception ex)
-            {
-                Insights.ReportError(ex, null);
-            }
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            viewModel.RefreshCountryCommand.Execute(null);
         }
     }
 }

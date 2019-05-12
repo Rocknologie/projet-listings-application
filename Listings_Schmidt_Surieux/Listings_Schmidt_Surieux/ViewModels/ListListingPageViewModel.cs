@@ -1,83 +1,76 @@
-﻿using System.Collections.Generic;
-using Listings_Schmidt_Surieux.Models;
-using Listings_Schmidt_Surieux.DAL;
-using Xamarin.Forms;
-using System.Threading.Tasks;
+﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+
+using Listings_Schmidt_Surieux.Models;
+using Listings_Schmidt_Surieux.Views;
+using Listings_Schmidt_Surieux.Ressources;
+using Listings_Schmidt_Surieux.Utils;
+using Listings_Schmidt_Surieux.Services;
+using System.Threading;
 
 namespace Listings_Schmidt_Surieux.ViewModels
 {
     public class ListListingPageViewModel : BaseViewModel
     {
-        public ObservableCollection<Listing> Listings { get; set; }
-
-        public ListListingPageViewModel()
+        public ListListingPageViewModel(INavigation Navigation) : base(Navigation)
         {
-            Titre = "Liste des articles";
-            Listings = new ObservableCollection<Listing>();
-
-            RefreshCountryCommand = new Command(async () => await ExecuteRefreshListingCommand());
+            Title = MyAppRessources.Title_AnnouncesPage;
+            Items = new ObservableCollection<Listing>();
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            AddItemCommand = new Command(async () => await ExecuteAddItemCommand());
+            //Au démarrage, on charge les items
+            LoadItemsCommand.Execute(null);
         }
+        public ObservableCollection<Listing> Items { get; set; }
 
-        #region Bindable Properties
-
-        private List<Listing> listListing;
-        public List<Listing> ListListing
-        {
-            get
-            {
-                return listListing;
-            }
-            set
-            {
-                listListing = value;
-                OnPropertyChanged("ListListing");
-            }
-        }
-        
-
-        private Listing selectedListing;
-        public Listing SelectedListing
-        {
-            get
-            {
-                return selectedListing;
-            }
-            set
-            {
-                selectedListing = value;
-                OnPropertyChanged();
-            }
-        }
-        #endregion
-
-
-        #region Bindable Commands
-
-        public Command RefreshCountryCommand { get; set; }
-
-        // Methode asyncrone pour rafraichir la liste des articles
-        private async Task ExecuteRefreshListingCommand()
+        public Command LoadItemsCommand { get; set; }
+        private async Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
-            //si on est en ligne
-            await GetListListings();
-
-            IsBusy = false;
-        }
-
-        #endregion
-        // Get tous les articles
-        #region Methods 
-        private async Task GetListListings()
-        {
-            ListingsWebService cws = new ListingsWebService();
-            List<Listing> listListings = await cws.GetListingFromAPIAsync();
-            foreach (Listing listing in listListings)
+            try
             {
-                this.Listings.Add(listing);
+                Items.Clear();
+                var items = await ProductDataStore.GetItemsAsync(true);
+                foreach (var item in items)
+                {
+                    Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
-        #endregion
+
+        public Command AddItemCommand { get; set; }
+        private async Task ExecuteAddItemCommand()
+        {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
+            try
+            {
+                await NavigationService.PushAsync(new CreateListingPage(), true);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
     }
 }
